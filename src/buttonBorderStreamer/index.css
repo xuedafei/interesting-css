@@ -1,0 +1,94 @@
+body{
+  background-color: black;
+}
+
+.button {
+  position: relative;
+  width: 120px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  background-color: rgba(255,255,255, .2);
+  color: #fff;
+  margin: 50px auto;
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+}
+
+.leftStreamer {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to top, transparent, #fff);
+  animation: moveLeftStreamer 2s linear infinite;
+}
+
+.topStreamer {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(to right, transparent, #fff);
+  animation: moveTopStreamer 2s 1s linear infinite;
+}
+
+.rightStreamer {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, transparent, #fff);
+  animation: moveRightStreamer 2s linear infinite;
+
+}
+
+.bottomStreamer {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translateX(100%);
+  background-image: linear-gradient(to left, transparent, #fff);
+  animation: moveBottomStreamer 2s 1s linear infinite;
+
+}
+
+@keyframes moveLeftStreamer {
+  from{
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes moveTopStreamer {
+  from{
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes moveRightStreamer {
+  from{
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes moveBottomStreamer {
+  from{
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
